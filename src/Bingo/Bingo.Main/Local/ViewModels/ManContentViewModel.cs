@@ -26,7 +26,23 @@ namespace Bingo.Main.Local.ViewModels
 								new BingoItem("하이하이"),
 								new BingoItem("하이하이"),
 								new BingoItem("하이하이"),
-								new BingoItem("하이하이")
+								new BingoItem("하이하이"),
+								new BingoItem("하이하이"),
+								new BingoItem("하이하이"),
+								new BingoItem("하이하이"),
+								new BingoItem("하이하이"),
+								new BingoItem("하이하이"),
+								new BingoItem("하이하이"),
+								new BingoItem("하이하이"),
+								new BingoItem("하이하이"),
+								new BingoItem("하이하이"),
+								new BingoItem("하이하이"),
+								new BingoItem("하이하이"),
+								new BingoItem("하이하이"),
+								new BingoItem("하이하이"),
+								new BingoItem("하이하이"),
+								new BingoItem("하이하이"),
+								new BingoItem("하이하이"),
 						};
 				}
 
