@@ -16,7 +16,10 @@
                         BorderThickness="{TemplateBinding BorderThickness}">
                         <controls:JamesGrid Rows="auto,*">
                             <TextBlock Grid.Row="0" Text="Bingo Main" />
-                            <units:BingoListBox Grid.Row="1" ItemsSource="{Binding BingoItems}" />
+                            <units:BingoListBox
+                                Grid.Row="1"
+                                Columns="{Binding Columns}"
+                                ItemsSource="{Binding BingoItems}" />
                         </controls:JamesGrid>
                     </Border>
                 </ControlTemplate>
