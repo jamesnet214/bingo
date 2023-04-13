@@ -21,7 +21,7 @@
         <Setter Property="ItemsPanel">
             <Setter.Value>
                 <ItemsPanelTemplate>
-                    <UniformGrid Columns="{Binding Columns}" />
+                    <UniformGrid Columns="{Binding NumOfLine}" />
                 </ItemsPanelTemplate>
             </Setter.Value>
         </Setter>
