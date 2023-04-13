@@ -14,12 +14,21 @@
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}">
-                        <controls:JamesGrid Rows="auto,*">
+                        <controls:JamesGrid Rows="auto,*,*">
                             <TextBlock Grid.Row="0" Text="Bingo Main" />
-                            <units:BingoListBox
-                                Grid.Row="1"
-                                Columns="{Binding Columns}"
-                                ItemsSource="{Binding BingoItems}" />
+                            <units:BingoListBox Grid.Row="1" ItemsSource="{Binding BingoItems}" />
+                            <StackPanel Grid.Row="2" Orientation="Vertical">
+                                <controls:JamesGrid Margin="0,5" Columns="*,100, *">
+                                    <Label Grid.Column="0" Content="GOAL" />
+                                    <TextBox x:Name="goalTxt" Grid.Column="1" />
+                                    <Button
+                                        Grid.Column="2"
+                                        Width="50"
+                                        Command="{Binding GoalCommand}"
+                                        CommandParameter="{Binding Text, ElementName=goalTxt}"
+                                        Content="Submit" />
+                                </controls:JamesGrid>
+                            </StackPanel>
                         </controls:JamesGrid>
                     </Border>
                 </ControlTemplate>
