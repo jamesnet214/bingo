@@ -9,8 +9,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:BingoListBoxItem}">
-                    <Border Height="{Binding RelativeSource={RelativeSource Self}, Path=ActualWidth}"
-                            Background="{TemplateBinding Background}"
+                    <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
                         <Label Content="{Binding Name}" />

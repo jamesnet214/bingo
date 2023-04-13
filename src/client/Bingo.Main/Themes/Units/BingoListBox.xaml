@@ -11,9 +11,7 @@
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}">
-                        <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
-                            <ItemsPresenter />
-                        </ScrollViewer>
+                        <ItemsPresenter/>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
@@ -21,7 +19,8 @@
         <Setter Property="ItemsPanel">
             <Setter.Value>
                 <ItemsPanelTemplate>
-                    <UniformGrid Columns="{Binding BingoItems.NumOfLine}" />
+                    <UniformGrid Rows="{Binding BingoItems.NumOfLine}"
+                                 Columns="{Binding BingoItems.NumOfLine}"/>
                 </ItemsPanelTemplate>
             </Setter.Value>
         </Setter>
