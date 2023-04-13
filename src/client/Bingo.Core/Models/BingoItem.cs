@@ -10,6 +10,10 @@ public class BingoItem : INotifyPropertyChanged
 
 	private bool _isInBingoLine;
 
+	public BingoItem()
+	{
+	}
+
 	public BingoItem(string name)
 	{
 		_name = name;

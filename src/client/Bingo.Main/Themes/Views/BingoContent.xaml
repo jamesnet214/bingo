@@ -3,7 +3,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:controls="clr-namespace:Jamesnet.Wpf.Controls;assembly=Jamesnet.Wpf"
     xmlns:units="clr-namespace:Bingo.Main.UI.Units"
-    xmlns:views="clr-namespace:Bingo.Main.UI.Views">
+    xmlns:views="clr-namespace:Bingo.Main.UI.Views"
+	xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+	xmlns:behaviors="clr-namespace:Bingo.LayoutSupport.Behaviors;assembly=Bingo.LayoutSupport">
 
     <Style TargetType="{x:Type views:MainContent}">
         <Setter Property="Background" Value="#FFFFFF" />
@@ -14,10 +16,15 @@
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}">
-                        <controls:JamesGrid Rows="auto,*,*">
+                        <controls:JamesGrid Rows="auto,*,*"
+											AllowDrop="True">
                             <TextBlock Grid.Row="0" Text="Bingo Main" />
-                            <units:BingoListBox Grid.Row="1" ItemsSource="{Binding BingoItems}" />
-                            <StackPanel Grid.Row="2" Orientation="Vertical">
+							<units:BingoListBox Grid.Row="1" ItemsSource="{Binding BingoItems}">
+								<b:Interaction.Behaviors>
+									<behaviors:DragDropBehavior TargetType="{x:Type units:BingoListBoxItem}" Delay="500"/>
+								</b:Interaction.Behaviors>
+							</units:BingoListBox>
+							<StackPanel Grid.Row="2" Orientation="Vertical">
                                 <controls:JamesGrid Margin="0,5" Columns="*,100, *">
                                     <Label Grid.Column="0" Content="GOAL" />
                                     <TextBox x:Name="goalTxt" Grid.Column="1" />

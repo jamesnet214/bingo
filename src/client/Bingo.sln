@@ -3,19 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bingo.Wpf", "Bingo.Wpf\Bingo.Wpf.csproj", "{2134D884-A98A-40AA-83E1-2577B3441B04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bingo.Wpf", "Bingo.Wpf\Bingo.Wpf.csproj", "{2134D884-A98A-40AA-83E1-2577B3441B04}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Partial", "Partial", "{F9B8C817-567F-4B5E-B4ED-AC8ED72F472C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Studio", "Studio", "{A3979A6B-2310-4E68-B903-32929AE85E9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bingo.Forms", "Bingo.Forms\Bingo.Forms.csproj", "{6B95DEF8-78C5-4D9D-A25F-A2D2AA72DCAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bingo.Forms", "Bingo.Forms\Bingo.Forms.csproj", "{6B95DEF8-78C5-4D9D-A25F-A2D2AA72DCAA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bingo.Core", "Bingo.Core\Bingo.Core.csproj", "{4706E751-378D-48CD-AD6E-91B6DF0C4242}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Based", "Based", "{84272F26-23CB-402F-B6DC-D2C16D2F07B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bingo.Main", "Bingo.Main\Bingo.Main.csproj", "{5658D085-8B04-429E-9352-07C1C9B9FF1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bingo.Main", "Bingo.Main\Bingo.Main.csproj", "{5658D085-8B04-429E-9352-07C1C9B9FF1C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{B001F17D-CA0D-4632-A202-20BF27ADDDBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bingo.LayoutSupport", "Bingo.LayoutSupport\Bingo.LayoutSupport.csproj", "{0D110B75-86C1-4693-ABD5-E99B5533576D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,10 @@ Global
 		{5658D085-8B04-429E-9352-07C1C9B9FF1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5658D085-8B04-429E-9352-07C1C9B9FF1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5658D085-8B04-429E-9352-07C1C9B9FF1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D110B75-86C1-4693-ABD5-E99B5533576D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D110B75-86C1-4693-ABD5-E99B5533576D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D110B75-86C1-4693-ABD5-E99B5533576D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D110B75-86C1-4693-ABD5-E99B5533576D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +56,7 @@ Global
 		{6B95DEF8-78C5-4D9D-A25F-A2D2AA72DCAA} = {F9B8C817-567F-4B5E-B4ED-AC8ED72F472C}
 		{4706E751-378D-48CD-AD6E-91B6DF0C4242} = {84272F26-23CB-402F-B6DC-D2C16D2F07B2}
 		{5658D085-8B04-429E-9352-07C1C9B9FF1C} = {F9B8C817-567F-4B5E-B4ED-AC8ED72F472C}
+		{0D110B75-86C1-4693-ABD5-E99B5533576D} = {B001F17D-CA0D-4632-A202-20BF27ADDDBD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0977BD63-A620-400C-9D7B-CF4CC0D989AE}

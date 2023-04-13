@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Bingo.Core\Bingo.Core.csproj" />
+    <ProjectReference Include="..\Bingo.LayoutSupport\Bingo.LayoutSupport.csproj" />
   </ItemGroup>
 
 </Project>
