@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
-using System.Linq;
 using System.Runtime.CompilerServices;
 
 namespace Bingo.Core.Models;
@@ -94,13 +91,17 @@ public class BingoItemCollection : ObservableCollection<BingoItem>
 			}
 		}
 
-		CheckLines(items.Chunk(_numOfLine));
-		CheckLines(ChunkRows(items, _numOfLine));
-		CheckLines(ChunkDiagonals(items, _numOfLine));
+		CheckLines(items.Chunk(_numOfLine)); // Check rows
+		CheckLines(ChunkRows(items, _numOfLine)); // Check columns
+		CheckLines(ChunkDiagonals(items, _numOfLine)); // Check diagonals
 
 		NumOfBingoLine = numOfBingo;
 	}
 
+	/// <summary>
+	/// 컬렉션이 변경될 때마다 이벤트를 등록합니다.
+	/// </summary>
+	/// <param name="e"></param>
 	protected override void OnCollectionChanged(NotifyCollectionChangedEventArgs e)
 	{
 		UnregisterEvents(e.OldItems?.OfType<BingoItem>());
@@ -127,8 +128,8 @@ public class BingoItemCollection : ObservableCollection<BingoItem>
 
 		var cursors = Enumerable.Range(0, numOfLine);
 
-		yield return cursors.Select(cursor => items.ElementAt(cursor * numOfLine + cursor));
-		yield return cursors.Select(cursor => items.ElementAt((cursor + 1) * (numOfLine - 1)));
+		yield return cursors.Select(cursor => items.ElementAt((cursor * numOfLine) + cursor)); // Diagonal
+		yield return cursors.Select(cursor => items.ElementAt((cursor + 1) * (numOfLine - 1))); // Anti-diagonal
 	}
 
 	private void RegisterEvents(IEnumerable<BingoItem>? items)
