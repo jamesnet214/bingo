@@ -16,10 +16,12 @@
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}">
-                        <controls:JamesGrid Rows="auto,*,*"
+                        <controls:JamesGrid Rows="auto, * , Auto"
 											AllowDrop="True">
                             <TextBlock Grid.Row="0" Text="Bingo Main" />
-							<units:BingoListBox Grid.Row="1" ItemsSource="{Binding BingoItems}">
+							<units:BingoListBox Grid.Row="1" 
+                                                ItemsSource="{Binding BingoItems}"
+                                                VerticalAlignment="Top">
 								<b:Interaction.Behaviors>
 									<behaviors:DragDropBehavior TargetType="{x:Type units:BingoListBoxItem}" Delay="500"/>
 								</b:Interaction.Behaviors>
