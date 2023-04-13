@@ -3,6 +3,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:Bingo.Main">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Bingo.Main;component/Themes/Views/BingoContent.xaml"/>
+        <ResourceDictionary Source="/Bingo.Main;component/Themes/Units/BingoListBoxItem.xaml" />
+        <ResourceDictionary Source="/Bingo.Main;component/Themes/Units/BingoListBox.xaml" />
+        <ResourceDictionary Source="/Bingo.Main;component/Themes/Views/BingoContent.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

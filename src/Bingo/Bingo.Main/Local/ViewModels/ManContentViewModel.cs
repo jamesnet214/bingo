@@ -1,22 +1,33 @@
-﻿using Jamesnet.Wpf.Controls;
-using Prism.Ioc;
-using Prism.Regions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Bingo.Core.Models;
+using CommunityToolkit.Mvvm.ComponentModel;
+using Jamesnet.Wpf.Controls;
+using Jamesnet.Wpf.Mvvm;
 
 namespace Bingo.Main.Local.ViewModels
 {
-    public class ManContentViewModel : IViewLoadable
-    {
-        public ManContentViewModel()
-        {
-        }
+		public partial class ManContentViewModel : ObservableBase, IViewLoadable
+		{
+				[ObservableProperty]
+				private BingoItemCollection bingoItems;
+				public ManContentViewModel()
+				{
+						bingoItems = new ()
+						{
+								new BingoItem("하이하이"),
+								new BingoItem("하이하이"),
+								new BingoItem("하이하이"),
+								new BingoItem("하이하이"),
+								new BingoItem("하이하이"),
+								new BingoItem("하이하이"),
+								new BingoItem("하이하이"),
+								new BingoItem("하이하이"),
+								new BingoItem("하이하이")
+						};
+				}
 
-        public void OnLoaded(IViewable view)
-        {
-        }
-    }
+				public void OnLoaded(IViewable view)
+				{
+
+				}
+		}
 }
