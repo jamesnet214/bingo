@@ -5,7 +5,7 @@ namespace Bingo.Forms.UI.Views
 {
     public class BingoWindow : JamesWindow
     {
-        static BingoWindow()
+        static BingoWindow() 
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(BingoWindow), new FrameworkPropertyMetadata(typeof(BingoWindow)));
         }
