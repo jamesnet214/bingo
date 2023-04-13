@@ -3,11 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingoWasm.Server", "BingoWasm\Server\BingoWasm.Server.csproj", "{7CCA3435-1279-4F00-BF19-EC9473209B84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BingoWasm.Server", "BingoWasm\Server\BingoWasm.Server.csproj", "{7CCA3435-1279-4F00-BF19-EC9473209B84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingoWasm.Client", "BingoWasm\Client\BingoWasm.Client.csproj", "{035A4791-02EE-49E5-80DE-6E394A6226D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BingoWasm.Client", "BingoWasm\Client\BingoWasm.Client.csproj", "{035A4791-02EE-49E5-80DE-6E394A6226D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingoWasm.Shared", "BingoWasm\Shared\BingoWasm.Shared.csproj", "{8DF97A7D-E425-4E92-9E7A-617825B62ABC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BingoWasm.Shared", "BingoWasm\Shared\BingoWasm.Shared.csproj", "{8DF97A7D-E425-4E92-9E7A-617825B62ABC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{7A7AE036-8652-421B-9859-625AAC646999}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entities", "Entities", "{6FF3250F-170B-4AEC-9A8B-351B5EAFEA43}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hubs", "Hubs", "{93A944B9-FBB6-4883-BD8A-4BDDD1DA2077}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{86221317-582A-4BA3-AE77-D38B584C341E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingoWasm.Entity", "BingoWasm.Entity\BingoWasm.Entity.csproj", "{3B5EDBC9-9088-42D4-BEE2-FBF50CF29874}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,9 +37,17 @@ Global
 		{8DF97A7D-E425-4E92-9E7A-617825B62ABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DF97A7D-E425-4E92-9E7A-617825B62ABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DF97A7D-E425-4E92-9E7A-617825B62ABC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B5EDBC9-9088-42D4-BEE2-FBF50CF29874}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B5EDBC9-9088-42D4-BEE2-FBF50CF29874}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B5EDBC9-9088-42D4-BEE2-FBF50CF29874}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B5EDBC9-9088-42D4-BEE2-FBF50CF29874}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8DF97A7D-E425-4E92-9E7A-617825B62ABC} = {7A7AE036-8652-421B-9859-625AAC646999}
+		{3B5EDBC9-9088-42D4-BEE2-FBF50CF29874} = {6FF3250F-170B-4AEC-9A8B-351B5EAFEA43}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0977BD63-A620-400C-9D7B-CF4CC0D989AE}
