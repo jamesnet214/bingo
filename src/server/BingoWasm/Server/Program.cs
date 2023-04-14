@@ -19,6 +19,11 @@ builder.Services.AddIdentityServer()
     .AddApiAuthorization<ApplicationUser, ApplicationDbContext>();
 
 builder.Services.AddAuthentication()
+    .AddGoogle(o =>
+    {
+        o.ClientId = builder.Configuration["Authentication:Google:ClientId"];
+        o.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
+    })
     .AddIdentityServerJwt();
 
 builder.Services.AddControllersWithViews();
