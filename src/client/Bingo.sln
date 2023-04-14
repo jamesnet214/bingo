@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bingo.Main", "Bingo.Main\Bi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{B001F17D-CA0D-4632-A202-20BF27ADDDBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bingo.LayoutSupport", "Bingo.LayoutSupport\Bingo.LayoutSupport.csproj", "{0D110B75-86C1-4693-ABD5-E99B5533576D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bingo.LayoutSupport", "Bingo.LayoutSupport\Bingo.LayoutSupport.csproj", "{0D110B75-86C1-4693-ABD5-E99B5533576D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bingo.Login", "Bingo.Login\Bingo.Login.csproj", "{672959FA-EB0D-4F0A-9D42-051D3F7FD1CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{0D110B75-86C1-4693-ABD5-E99B5533576D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D110B75-86C1-4693-ABD5-E99B5533576D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D110B75-86C1-4693-ABD5-E99B5533576D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{672959FA-EB0D-4F0A-9D42-051D3F7FD1CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{672959FA-EB0D-4F0A-9D42-051D3F7FD1CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{672959FA-EB0D-4F0A-9D42-051D3F7FD1CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{672959FA-EB0D-4F0A-9D42-051D3F7FD1CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +63,7 @@ Global
 		{4706E751-378D-48CD-AD6E-91B6DF0C4242} = {84272F26-23CB-402F-B6DC-D2C16D2F07B2}
 		{5658D085-8B04-429E-9352-07C1C9B9FF1C} = {F9B8C817-567F-4B5E-B4ED-AC8ED72F472C}
 		{0D110B75-86C1-4693-ABD5-E99B5533576D} = {B001F17D-CA0D-4632-A202-20BF27ADDDBD}
+		{672959FA-EB0D-4F0A-9D42-051D3F7FD1CC} = {F9B8C817-567F-4B5E-B4ED-AC8ED72F472C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0977BD63-A620-400C-9D7B-CF4CC0D989AE}

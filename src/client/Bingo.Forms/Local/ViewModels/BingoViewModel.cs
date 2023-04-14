@@ -23,7 +23,7 @@ namespace Bingo.Forms.Local.ViewModels
         public void OnLoaded(IViewable view)
         {
             IRegion mainRegion = _regionManager.Regions["MainRegion"];
-            IViewable loginContent = _containerProvider.Resolve<IViewable>("MainContent");
+            IViewable loginContent = _containerProvider.Resolve<IViewable>("LoginContent");
 
             if (!mainRegion.Views.Contains(loginContent))
             {

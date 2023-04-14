@@ -1,5 +1,6 @@
 ﻿using Bingo.Forms.Local.ViewModels;
 using Bingo.Forms.UI.Views;
+using Bingo.Login.UI.Views;
 using Bingo.Main.UI.Views;
 using Jamesnet.Wpf.Controls;
 using Prism.Ioc;
@@ -12,15 +13,16 @@ using System.Threading.Tasks;
 
 namespace Bingo.Wpf.Properties
 {
-    internal class ViewModules : IModule
-    {
-        public void OnInitialized(IContainerProvider containerProvider)
-        {
-        }
+		internal class ViewModules : IModule
+		{
+				public void OnInitialized(IContainerProvider containerProvider)
+				{
+				}
 
-        public void RegisterTypes(IContainerRegistry containerRegistry)
-        {
-            containerRegistry.RegisterSingleton<IViewable, MainContent>("MainContent");
-        }
-    }
+				public void RegisterTypes(IContainerRegistry containerRegistry)
+				{
+						containerRegistry.RegisterSingleton<IViewable, LoginContent> ("LoginContent");
+						containerRegistry.RegisterSingleton<IViewable, MainContent> ("MainContent");
+				}
+		}
 }
