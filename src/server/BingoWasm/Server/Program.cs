@@ -1,8 +1,9 @@
+global using BingoWasm.Entity.Models;
 using BingoWasm.Server.Data;
-using BingoWasm.Server.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,8 +22,8 @@ builder.Services.AddIdentityServer()
 builder.Services.AddAuthentication()
     .AddGoogle(o =>
     {
-        o.ClientId = builder.Configuration["Authentication:Google:ClientId"];
-        o.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
+        o.ClientId = builder.Configuration["Authentication:Google:ClientId"]!;
+        o.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"]!;
     })
     .AddIdentityServerJwt();
 
