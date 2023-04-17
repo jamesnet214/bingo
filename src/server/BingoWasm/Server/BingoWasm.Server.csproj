@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\BingoWasm.Entity\BingoWasm.Entity.csproj" />
     <ProjectReference Include="..\Client\BingoWasm.Client.csproj" />
     <ProjectReference Include="..\Shared\BingoWasm.Shared.csproj" />
   </ItemGroup>
@@ -24,6 +25,10 @@
     <PackageReference Include="Microsoft.AspNetCore.ApiAuthorization.IdentityServer" Version="7.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>
