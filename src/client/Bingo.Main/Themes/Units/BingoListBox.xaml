@@ -13,7 +13,7 @@
                         BorderThickness="{TemplateBinding BorderThickness}">
                         <ItemsPresenter/>
                     </Border>
-                </ControlTemplate>
+                </ControlTemplate> 
             </Setter.Value>
         </Setter>
         <Setter Property="ItemsPanel">
