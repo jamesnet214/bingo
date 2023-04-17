@@ -1,5 +1,7 @@
 global using BingoWasm.Entity.Models;
 using BingoWasm.Server.Data;
+using BingoWasm.Server.Repositories;
+using BingoWasm.Server.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +20,10 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.R
 
 builder.Services.AddIdentityServer()
     .AddApiAuthorization<ApplicationUser, ApplicationDbContext>();
+
+builder.Services.AddScoped<IBingoWordRepository, BingoWordRepository>();
+builder.Services.AddScoped<BingoService>();
+
 
 builder.Services.AddAuthentication()
     .AddGoogle(o =>
