@@ -63,8 +63,6 @@ namespace Bingo.Main.Local.ViewModels
 								if (item == null)
 										return;
 								item.IsChecked = true;
-
-								this.BingoItems.Update ();
 								if(this.BingoItems.IsBingo)
 								{
 										Console.WriteLine ("빙고");
@@ -124,7 +122,7 @@ namespace Bingo.Main.Local.ViewModels
 				private void TestString(string data)
 				{
 						this._ea.GetEvent<RecvDataEvent> ().Publish (data);
-						this.Recvdata = null;
+						this.Recvdata = "";
 				}
 				#endregion
 		}
