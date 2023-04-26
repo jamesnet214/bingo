@@ -8,19 +8,21 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:BingoListBox}">
                     <Border
+                        Padding="5,5"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}">
-                        <ItemsPresenter/>
+                        <ScrollViewer VerticalScrollBarVisibility="Auto">
+                            <ItemsPresenter />
+                        </ScrollViewer>
                     </Border>
-                </ControlTemplate> 
+                </ControlTemplate>
             </Setter.Value>
         </Setter>
         <Setter Property="ItemsPanel">
             <Setter.Value>
                 <ItemsPanelTemplate>
-                    <UniformGrid Rows="{Binding BingoItems.NumOfLine}"
-                                 Columns="{Binding BingoItems.NumOfLine}"/>
+                    <UniformGrid Columns="{Binding BingoItems.NumOfLine}" />
                 </ItemsPanelTemplate>
             </Setter.Value>
         </Setter>

@@ -3,41 +3,68 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:controls="clr-namespace:Jamesnet.Wpf.Controls;assembly=Jamesnet.Wpf"
     xmlns:units="clr-namespace:Bingo.Main.UI.Units"
-    xmlns:views="clr-namespace:Bingo.Main.UI.Views"
-	xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
-	xmlns:behaviors="clr-namespace:Bingo.LayoutSupport.Behaviors;assembly=Bingo.LayoutSupport">
+    xmlns:views="clr-namespace:Bingo.Main.UI.Views">
 
     <Style TargetType="{x:Type views:MainContent}">
+        <Setter Property="Width" Value="1000" />
+        <Setter Property="Height" Value="600" />
         <Setter Property="Background" Value="#FFFFFF" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type views:MainContent}">
                     <Border
+                        Padding="10"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}">
-                        <controls:JamesGrid Rows="auto, * , Auto"
-											AllowDrop="True">
-                            <TextBlock Grid.Row="0" Text="Bingo Main" />
-							<units:BingoListBox Grid.Row="1" 
-                                                ItemsSource="{Binding BingoItems}">
-								<b:Interaction.Behaviors>
-									<behaviors:DragDropBehavior TargetType="{x:Type units:BingoListBoxItem}" Delay="500"/>
-								</b:Interaction.Behaviors>
-							</units:BingoListBox>
-							<StackPanel Grid.Row="2" Orientation="Vertical">
-                                <controls:JamesGrid Margin="0,5" Columns="*,100, *">
-                                    <Label Grid.Column="0" Content="GOAL" />
-                                    <TextBox x:Name="goalTxt" Grid.Column="1" />
-                                    <Button
-                                        Grid.Column="2"
-                                        Width="50"
-                                        Command="{Binding GoalCommand}"
-                                        CommandParameter="{Binding Text, ElementName=goalTxt}"
-                                        Content="Submit" />
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="500" />
+                                <ColumnDefinition Width="10" />
+                                <ColumnDefinition Width="300" />
+                            </Grid.ColumnDefinitions>
+                            <controls:JamesGrid
+                                Grid.Column="0"
+                                AllowDrop="True"
+                                Rows="auto, * ">
+                                <controls:JamesGrid Grid.Row="0">
+                                    <TextBlock HorizontalAlignment="Left" Text="Bingo Main" />
+                                    <StackPanel HorizontalAlignment="Right" Orientation="Vertical">
+                                        <controls:JamesGrid Margin="0,5" Columns="*,100, *">
+                                            <Label Grid.Column="0" Content="GOAL" />
+                                            <TextBox x:Name="goalTxt" Grid.Column="1" />
+                                            <Button
+                                                Grid.Column="2"
+                                                Width="50"
+                                                Command="{Binding GoalCommand}"
+                                                CommandParameter="{Binding Text, ElementName=goalTxt}"
+                                                Content="Submit" />
+                                        </controls:JamesGrid>
+                                    </StackPanel>
                                 </controls:JamesGrid>
-                            </StackPanel>
-                        </controls:JamesGrid>
+                                <units:BingoListBox
+                                    Grid.Row="1"
+                                    AllowDrop="True"
+                                    ItemsSource="{Binding BingoItems}" />
+                            </controls:JamesGrid>
+                            <Border
+                                Grid.Column="2"
+                                Padding="5"
+                                BorderBrush="Black"
+                                BorderThickness="1">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="500" />
+                                    </Grid.RowDefinitions>
+                                    <TextBlock
+                                        Grid.Row="0"
+                                        Margin="0,0,0,10"
+                                        Text="TEST BED" />
+                                    <units:BingoListBox Grid.Row="1" ItemsSource="{Binding ServerData}" />
+                                </Grid>
+                            </Border>
+                        </Grid>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>

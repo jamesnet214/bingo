@@ -19,7 +19,7 @@ namespace Bingo.Wpf.Properties
 				{
 						items.Register<BingoWindow, BingoViewModel> ();
 						items.Register<LoginContent, LoginContentViewModel> ();
-						items.Register<MainContent, ManContentViewModel> ();
+						items.Register<MainContent, MainContentViewModel> ();
 				}
 		}
 }
