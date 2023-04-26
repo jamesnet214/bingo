@@ -63,10 +63,8 @@ namespace Bingo.Main.UI.Units
 								BingoEventArgs args = new BingoEventArgs ();
 								args.DropItem = droppedObject.DataContext as BingoItem;
 								args.TargetItem = Targetobejct;
-								this.DataContext = args.DropItem;
 								DropCommand?.Execute (args);
 						}
-
 				}
 		}
 }

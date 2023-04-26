@@ -11,7 +11,7 @@ public class BingoItemCollection : ObservableCollection<BingoItem>
 
 	private int _numOfLine;
 
-	private int _numOfBingoLine;
+	private int _numOfBingoLine = 0;
 
 	/// <summary>
 	/// 목표 줄 수를 가져오거나 설정합니다.

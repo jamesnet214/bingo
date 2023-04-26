@@ -30,6 +30,7 @@
                                 <controls:JamesGrid Grid.Row="0">
                                     <TextBlock HorizontalAlignment="Left" Text="Bingo Main" />
                                     <StackPanel HorizontalAlignment="Right" Orientation="Vertical">
+                                        <TextBlock Text="{Binding BingoItems.NumOfBingoLine, StringFormat='The Remove Line is {0}'}" />
                                         <controls:JamesGrid Margin="0,5" Columns="*,100, *">
                                             <Label Grid.Column="0" Content="GOAL" />
                                             <TextBox x:Name="goalTxt" Grid.Column="1" />
@@ -56,12 +57,27 @@
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="auto" />
                                         <RowDefinition Height="500" />
+                                        <RowDefinition Height="30" />
                                     </Grid.RowDefinitions>
                                     <TextBlock
                                         Grid.Row="0"
                                         Margin="0,0,0,10"
                                         Text="TEST BED" />
                                     <units:BingoListBox Grid.Row="1" ItemsSource="{Binding ServerData}" />
+
+                                    <Grid Grid.Row="2">
+                                        <TextBox
+                                            x:Name="recvDataaaaaatxt"
+                                            Width="150"
+                                            HorizontalAlignment="Left"
+                                            Text="{Binding RecvData}" />
+                                        <Button
+                                            Width="80"
+                                            HorizontalAlignment="Right"
+                                            Command="{Binding TestStringCommand}"
+                                            CommandParameter="{Binding Text, ElementName=recvDataaaaaatxt}"
+                                            Content="Send" />
+                                    </Grid>
                                 </Grid>
                             </Border>
                         </Grid>

@@ -15,13 +15,21 @@
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}">
-                        <Grid Background="Transparent">
+                        <Grid x:Name="grd" Background="Transparent">
                             <Label
+                                x:Name="txt"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
-                                Content="{Binding Name}" />
+                                Content="{Binding Name}"
+                                Foreground="Black" />
                         </Grid>
                     </Border>
+                    <ControlTemplate.Triggers>
+                        <DataTrigger Binding="{Binding IsChecked}" Value="True">
+                            <Setter TargetName="grd" Property="Background" Value="red" />
+                            <Setter TargetName="txt" Property="Foreground" Value="white" />
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
